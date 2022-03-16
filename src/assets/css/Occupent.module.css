@@ -1,0 +1,620 @@
+.occupentRoom {
+  max-width: 90%;
+  margin: auto;
+}
+
+.office img {
+  width: 75%;
+  /* height: 650px; */
+  position: relative;
+  object-fit: cover;
+}
+
+.room1Table,
+.room2Table,
+.room21Table,
+.room3Table,
+.room31Table,
+.room4Table,
+.room5Table,
+.room51Table,
+.room52Table,
+.room6Table,
+.room7Table,
+.room8Table,
+.table1chair1,
+.table1chair2,
+.table1chair3,
+.table1chair4,
+.table2chair1,
+.table2chair2,
+.table2chair3,
+.table2chair4,
+.table21chair1,
+.table21chair2,
+.table21chair3,
+.table21chair4,
+.table3chair1,
+.table3chair2,
+.table3chair3,
+.table3chair4,
+.table31chair1,
+.table31chair2,
+.table31chair3,
+.table31chair4,
+.table4chair1,
+.table4chair2,
+.table4chair3,
+.table4chair4,
+.table4chair5,
+.table4chair6,
+.table7chair1,
+.table7chair2,
+.table7chair3,
+.table7chair4,
+.table7chair5,
+.table7chair6,
+.table7chair7,
+.table7chair8,
+.table5chair1,
+.table5chair2,
+.table5chair3,
+.table5chair4,
+.table51chair1,
+.table51chair2,
+.table51chair3,
+.table51chair4,
+.table52chair1,
+.table52chair2,
+.table52chair3,
+.table52chair4,
+.table6chair1,
+.table6chair2,
+.table6chair3,
+.table6chair4,
+.table6chair5,
+.table6chair6,
+.table6chair7,
+.table6chair8,
+.table8chair1,
+.table8chair2,
+.table8chair3 {
+  position: absolute;
+  top: 20px;
+}
+
+.room1Table img {
+  width: 100%;
+  height: 80px;
+  top: 144px;
+  left: 27px;
+}
+
+.room2Table img {
+  width: 100%;
+  height: 80px;
+  top: 144px;
+  left: 180px;
+}
+
+.room21Table img {
+  width: 100%;
+  height: 80px;
+  top: 144px;
+  left: 300px;
+}
+
+.room3Table img {
+  width: 100%;
+  height: 90px;
+  top: 340px;
+  left: 90px;
+  transform: rotate(90deg);
+}
+
+.room31Table img {
+  width: 100%;
+  height: 90px;
+  top: 470px;
+  left: 90px;
+  transform: rotate(90deg);
+}
+
+.room4Table img {
+  width: 100%;
+  height: 110px;
+  top: 380px;
+  left: 250px;
+  transform: rotate(48deg);
+}
+
+.room5Table img {
+  width: 100%;
+  height: 50px;
+  top: 164px;
+  left: 430px;
+}
+
+.room51Table img {
+  width: 100%;
+  height: 50px;
+  top: 164px;
+  left: 500px;
+}
+
+.room52Table img {
+  width: 100%;
+  height: 50px;
+  top: 164px;
+  left: 570px;
+}
+
+.room6Table img {
+  width: 100%;
+  height: 140px;
+  top: 230px;
+  left: 460px;
+}
+
+.room7Table img {
+  width: 100%;
+  height: 118px;
+  top: 250px;
+  left: 250px;
+}
+
+.room8Table img {
+  width: 100%;
+  height: 60px;
+  top: 540px;
+  left: 530px;
+}
+
+.table1chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 135px;
+  left: 107px;
+}
+
+.table1chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 165px;
+  left: 107px;
+}
+
+.table1chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 135px;
+  left: 13px;
+  transform: rotate(180deg);
+}
+
+.table1chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 165px;
+  left: 13px;
+  transform: rotate(180deg);
+}
+
+
+.table2chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 135px;
+  left: 260px;
+}
+
+.table2chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 165px;
+  left: 260px;
+}
+
+.table2chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 135px;
+  left: 165px;
+  transform: rotate(180deg);
+}
+
+.table2chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 165px;
+  left: 165px;
+  transform: rotate(180deg);
+}
+
+.table21chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 135px;
+  left: 380px;
+}
+
+.table21chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 165px;
+  left: 380px;
+}
+
+.table21chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 135px;
+  left: 285px;
+  transform: rotate(180deg);
+}
+
+.table21chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 165px;
+  left: 285px;
+  transform: rotate(180deg);
+}
+
+
+
+.table3chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 300px;
+  left: 108px;
+  transform: rotate(270deg);
+}
+
+.table3chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 300px;
+  left: 145px;
+  transform: rotate(270deg);
+}
+
+.table3chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 408px;
+  left: 108px;
+  transform: rotate(90deg);
+}
+
+.table3chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 408px;
+  left: 145px;
+  transform: rotate(90deg);
+}
+
+
+
+.table31chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 432px;
+  left: 108px;
+  transform: rotate(270deg);
+}
+
+.table31chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 432px;
+  left: 145px;
+  transform: rotate(270deg);
+}
+
+.table31chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 539px;
+  left: 108px;
+  transform: rotate(90deg);
+}
+
+.table31chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 539px;
+  left: 145px;
+  transform: rotate(90deg);
+}
+
+.table4chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 387px;
+  left: 242px;
+  transform: rotate(230deg);
+}
+
+.table4chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 366px;
+  left: 266px;
+  transform: rotate(230deg);
+}
+
+.table4chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 347px;
+  left: 287px;
+  transform: rotate(230deg);
+}
+
+
+.table4chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 460px;
+  left: 312px;
+  transform: rotate(48deg);
+}
+
+.table4chair5 img {
+  width: 100%;
+  height: 20px;
+  top: 441px;
+  left: 333px;
+  transform: rotate(48deg);
+}
+
+.table4chair6 img {
+  width: 100%;
+  height: 20px;
+  top: 421px;
+  left: 356px;
+  transform: rotate(48deg);
+}
+
+.table7chair1 img {
+  width: 100%;
+  height: 20px;
+  top: 245px;
+  left: 255px;
+  transform: rotate(270deg);
+}
+
+.table7chair2 img {
+  width: 100%;
+  height: 20px;
+  top: 302px;
+  left: 255px;
+  transform: rotate(90deg);
+}
+
+.table7chair3 img {
+  width: 100%;
+  height: 20px;
+  top: 275px;
+  left: 225px;
+  transform: rotate(180deg);
+}
+
+.table7chair4 img {
+  width: 100%;
+  height: 20px;
+  top: 245px;
+  left: 343px;
+  transform: rotate(270deg);
+}
+
+.table7chair5 img {
+  width: 100%;
+  height: 20px;
+  top: 302px;
+  left: 343px;
+  transform: rotate(90deg);
+}
+
+.table7chair6 img {
+  width: 100%;
+  height: 20px;
+  top: 275px;
+  left: 370px;
+  transform: rotate(180deg);
+}
+
+.table7chair7 img {
+  width: 100%;
+  height: 23px;
+  top: 230px;
+  left: 297px;
+}
+
+.table7chair8 img {
+  width: 100%;
+  height: 23px;
+  top: 318px;
+  left: 297px;
+}
+
+.table5chair1 img {
+  width: 100%;
+  height: 25px;
+  top: 135px;
+  left: 422px;
+  transform: rotate(180deg);
+}
+
+.table5chair2 img {
+  width: 100%;
+  height: 25px;
+  top: 136px;
+  left: 467px;
+  transform: rotate(270deg);
+}
+
+.table5chair3 img {
+  width: 100%;
+  height: 25px;
+  top: 175px;
+  left: 465px;
+  transform: rotate(360deg);
+}
+
+.table5chair4 img {
+  width: 100%;
+  height: 25px;
+  top: 176px;
+  left: 421px;
+  transform: rotate(90deg);
+}
+
+.table51chair1 img {
+  width: 100%;
+  height: 25px;
+  top: 135px;
+  left: 493px;
+  transform: rotate(180deg);
+}
+
+.table51chair2 img {
+  width: 100%;
+  height: 25px;
+  top: 136px;
+  left: 535px;
+  transform: rotate(270deg);
+}
+
+.table51chair3 img {
+  width: 100%;
+  height: 25px;
+  top: 175px;
+  left: 535px;
+  transform: rotate(360deg);
+}
+
+.table51chair4 img {
+  width: 100%;
+  height: 25px;
+  top: 176px;
+  left: 493px;
+  transform: rotate(90deg);
+}
+
+.table52chair1 img {
+  width: 100%;
+  height: 25px;
+  top: 135px;
+  left: 565px;
+  transform: rotate(180deg);
+}
+
+.table52chair2 img {
+  width: 100%;
+  height: 25px;
+  top: 136px;
+  left: 602px;
+  transform: rotate(270deg);
+}
+
+.table52chair3 img {
+  width: 100%;
+  height: 25px;
+  top: 175px;
+  left: 602px;
+  transform: rotate(360deg);
+}
+
+.table52chair4 img {
+  width: 100%;
+  height: 25px;
+  top: 176px;
+  left: 563px;
+  transform: rotate(90deg);
+}
+
+.table6chair1 img {
+  width: 100%;
+  height: 25px;
+  top: 235px;
+  left: 485px;
+}
+
+.table6chair2 img {
+  width: 100%;
+  height: 25px;
+  top: 235px;
+  left: 515px;
+}
+
+.table6chair3 img {
+  width: 100%;
+  height: 25px;
+  top: 235px;
+  left: 545px;
+}
+
+.table6chair4 img {
+  width: 100%;
+  height: 25px;
+  top: 235px;
+  left: 575px;
+}
+
+.table6chair5 img {
+  width: 100%;
+  height: 25px;
+  top: 292px;
+  left: 460px;
+  transform: rotate(180deg);
+}
+
+.table6chair6 img {
+  width: 100%;
+  height: 25px;
+  top: 292px;
+  left: 490px;
+  transform: rotate(180deg);
+}
+
+.table6chair7 img {
+  width: 100%;
+  height: 25px;
+  top: 292px;
+  left: 520px;
+  transform: rotate(180deg);
+}
+
+.table6chair8 img {
+  width: 100%;
+  height: 25px;
+  top: 292px;
+  left: 550px;
+  transform: rotate(180deg);
+}
+
+.table8chair1 img {
+  width: 100%;
+  height: 25px;
+  top: 545px;
+  left: 515px;
+  transform: rotate(230deg);
+}
+
+.table8chair2 img {
+  width: 100%;
+  height: 25px;
+  top: 545px;
+  left: 580px;
+  transform: rotate(484deg);
+}
+
+.table8chair3 img {
+  width: 100%;
+  height: 25px;
+  top: 502px;
+  left: 546px;
+}

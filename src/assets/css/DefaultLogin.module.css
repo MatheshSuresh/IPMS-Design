@@ -1,0 +1,76 @@
+.card {
+  position: relative;
+  width: 380px;
+  max-width: 960px;
+  margin: auto;
+  margin-top: 20vh;
+
+  z-index: 10;
+}
+.card:before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  max-width: 960px;
+  width: 380px;
+  height: 550px;
+  margin: auto;
+  border-radius: 20px;
+  position: fixed;
+  opacity: 0.7;
+  z-index: -1;
+}
+.container {
+  padding: 4rem 2rem;
+  margin-top: 20px;
+}
+.container h1 {
+  text-align: center;
+}
+.container small {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 75px;
+  font-size: 10px;
+}
+.container h1 span {
+  color: green;
+}
+.container h5 {
+  color: red;
+  margin: 20px 0;
+  text-align: center;
+}
+.search {
+  position: relative;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.searchIcon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 16px;
+}
+.input {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.forgetPassword {
+  margin-top: 40px;
+}
+.forgetPassword p {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: small;
+}
+.forgetPassword span {
+  font-weight: 700;
+}
+p:hover {
+  cursor: pointer;
+}

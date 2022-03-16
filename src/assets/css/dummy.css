@@ -1,0 +1,8 @@
+.MuiInputBase-root input {
+  margin-left: 4rem;
+}
+
+.MuiButton-contained {
+  width: 100%;
+  height: 50px;
+}
