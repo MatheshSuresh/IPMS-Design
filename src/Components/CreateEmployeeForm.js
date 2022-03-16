@@ -14,6 +14,7 @@ const CreateEmployeeForm = () => {
       email: "",
       phone: "",
       image: "",
+      password: ''
     },
 
     onSubmit: async (values) => {
@@ -29,8 +30,8 @@ const CreateEmployeeForm = () => {
       var imgurl = await file11
       var min = 1000;
       var max = 9999;
-      var rand = Math.round(  min + (Math.random() * (max-min)));
-      
+      var rand = Math.round(min + (Math.random() * (max - min)));
+
       var newdata = {
         firstname: values.FirstName,
         email: values.Email,
@@ -38,35 +39,37 @@ const CreateEmployeeForm = () => {
         gender: values.Gender,
         designation: values.Designation,
         profilepic: imgurl,
-        phone: values.PhoneNumber
+        phone: values.PhoneNumber,
+        password: values.PassWord
       }
       var usercreate = await axios
         .post("http://localhost:2100/users/create", newdata)
         .then((res) => {
           return res.data
         });
+        console.log(usercreate)
       if (usercreate !== null) {
         alert("User Created Successfully")
-        if(newdata.gender == 'male' || newdata.gender == 'Male'){
-          var gendervalue = 0 
-        }else{
+        if (newdata.gender == 'male' || newdata.gender == 'Male') {
+          var gendervalue = 0
+        } else {
           var gendervalue = 1
         }
         var data = {
           "operator": "AddPerson",
           "picURI": `${newdata.profilepic}`,
           "info": {
-          "DeviceID":1872723,
-          "CustomizeID": `${rand}`,
-          "CardType":0, "IdCard":"430923199011024590",
-          "PersonType": 0,
-          "Name":`${newdata.firstname} ${newdata.lastname}`,
-          "Gender": 0,
-          "Nation":1, 
-          "Birthday":"1990-11-04",
-          "Telnum":"18888888888",
-          "ValidBegin":"2022-01-30T09:09:20",
-          "ValidEnd":"2022-01-30T16:49:00"
+            "DeviceID": 1872723,
+            "CustomizeID": `${rand}`,
+            "CardType": 0, "IdCard": "430923199011024590",
+            "PersonType": 0,
+            "Name": `${newdata.firstname} ${newdata.lastname}`,
+            "Gender": 0,
+            "Nation": 1,
+            "Birthday": "1990-11-04",
+            "Telnum": "18888888888",
+            "ValidBegin": "2022-01-30T09:09:20",
+            "ValidEnd": "2022-01-30T16:49:00"
           }
         }
         console.log(data)
@@ -76,8 +79,8 @@ const CreateEmployeeForm = () => {
         const token = Buffer.from(`${username}:${password}`, 'utf8').toString('base64')
         console.log(token)
         var facepanelcreate = await axios
-          .post("http://192.168.0.105/action/AddPerson",data, {
-            headers:{
+          .post("http://192.168.0.105/action/AddPerson", data, {
+            headers: {
               'Authorization': `Basic ${token}`
             }
           })
@@ -117,6 +120,9 @@ const CreateEmployeeForm = () => {
           <label htmlFor="PhoneNumber">Phone Number</label>
           <input className={styles.m1} id="PhoneNumber" type="number" onChange={formik.handleChange}
             defaultValue={formik.values.phone} />
+          <label htmlFor="PassWord">PassWord</label>
+          <input className={styles.m1} id="PassWord" type="text" onChange={formik.handleChange}
+            defaultValue={formik.values.password} />
           <h6>Facility Access</h6>
           <div className={styles.checkBoxContainer}>
             <div className={styles.checkBox}>

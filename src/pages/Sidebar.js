@@ -28,11 +28,11 @@ const Sidebar = () => {
         <ul className="mt-5 ">
           <li>
             <span id="border"></span>
-            <NavLink
+            <a
               className="navlinkli"
               activeClassName="activenavlink"
               exact
-              to="/dashboard"
+              href="/dashboard"
             >
               <span className="iconspan">
                 <MdDashboard />
@@ -40,7 +40,7 @@ const Sidebar = () => {
               {isbigbar ? (
                 <span className="spanname animate__backInLeft">Dashboard</span>
               ) : null}
-            </NavLink>
+            </a>
           </li>
           <li>
             <NavLink className="navlinkli" activeClassName="/" exact to="">
@@ -55,7 +55,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink className="navlinkli" activeClassName="/" exact to="/calander">
+            <a className="navlinkli" activeClassName="/" exact href="/calander">
               <span className="iconspan">
                 <FaCalendarDay />
               </span>
@@ -64,10 +64,10 @@ const Sidebar = () => {
                   Booking Management
                 </span>
               ) : null}
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink className="navlinkli" activeClassName="/" exact to="/">
+            <a className="navlinkli" activeClassName="/" exact href="/userlist">
               <span className="iconspan">
                 <AiOutlineUsergroupDelete />
               </span>
@@ -76,14 +76,14 @@ const Sidebar = () => {
                   User Management
                 </span>
               ) : null}
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
+            <a
               className="navlinkli"
               activeClassName="/"
               exact
-              to="/report"
+              href="/report"
             >
               <span className="iconspan">
                 <RiBarcodeBoxLine />
@@ -91,17 +91,17 @@ const Sidebar = () => {
               {isbigbar ? (
                 <span className="spanname animate__backInLeft">Report</span>
               ) : null}
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink className="navlinkli" activeClassName="/" exact to="/occupent">
+            <a className="navlinkli" activeClassName="/" exact href="/">
               <span className="iconspan">
                 <FaCalendarDay />
               </span>
               {isbigbar ? (
                 <span className="spanname animate__backInLeft">Settings</span>
               ) : null}
-            </NavLink>
+            </a>
           </li>
         </ul>
       </div>

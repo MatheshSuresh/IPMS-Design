@@ -1,0 +1,136 @@
+Booking Api
+----------------------------------------------------
+
+Create Booking 
+------------------
+
+Method      : POST
+Url         : http://<server ipaddr>/booking/create
+Body        : {
+                tableid: 1,
+                seatnumber: 2,
+                employeeid: userid
+                }
+Response    : Registration successful
+
+View All Booking
+-----------------
+
+Method      : GET
+Url         : http://<server ipaddr>/booking/viewall
+Response    : data
+
+
+View Single Booking
+-----------------
+
+Method      : POST
+Url         : http://<server ipaddr>/booking/view
+Body        : {
+                id:booking id
+                }
+
+Response    : data
+
+
+Update Booking
+-----------------
+
+Method      : POST
+Url         : http://<server ipaddr>/booking/update
+Body        : {
+                id:booking id
+                data
+                }
+
+Response    : Updated Successfully
+
+
+Delete Booking
+---------------
+Method      : POST
+Url         : http://<server ipaddr>/booking/destroy
+Body        : {
+                id:booking id
+              }
+
+Response    : Deleted Successfully
+
+
+Employee Api
+--------------------------------------------------------
+
+Create Employee
+----------------
+Method      : POST
+
+Url         : http://<server ipaddr>/users/create
+
+Body        : {
+                firstname: values.FirstName,
+                email: values.Email,
+                lastname: values.LastName,
+                gender: values.Gender,
+                designation: values.Designation,
+                profilepic: imgurl,
+                phone: values.PhoneNumber,
+                password: values.PassWord
+              }
+
+Response    : Response Data
+
+
+View All Employee
+-------------------
+Method      : GET
+Url         : http://<server ipaddr>/users/viewall
+Response    : data
+
+
+View Single Employee
+-----------------
+
+Method      : POST
+Url         : http://<server ipaddr>/users/view
+Body        : {
+                id:user Id
+                }
+
+Response    : data
+
+
+Update Employee
+-----------------
+
+Method      : POST
+Url         : http://<server ipaddr>/users/update
+Body        : {
+                id:User id
+                data
+                }
+
+Response    : Updated Successfully
+
+
+Delete Employee
+---------------
+Method      : POST
+Url         : http://<server ipaddr>/users/destroy
+Body        : {
+                id:User id
+              }
+
+Response    : Deleted Successfully
+
+
+Login Employee
+-------------
+
+Method      : POST
+Url         : http://<server ipaddr>/users/login
+Body        : {
+              "email":"",
+              "password":""
+            }
+
+Response    : Response Msg

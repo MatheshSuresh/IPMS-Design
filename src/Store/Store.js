@@ -7,7 +7,8 @@ const loginSlice = createSlice({
     islogin: true,
     viewuser: sessionStorage.getItem("viewuserid"),
     tablename:sessionStorage.getItem("tablename"),
-    chairname:sessionStorage.getItem("chairname")
+    chairname:sessionStorage.getItem("chairname"),
+    userid:sessionStorage.getItem("userid")
   },
   reducers: {
     changePassword(state) {

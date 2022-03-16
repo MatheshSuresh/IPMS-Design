@@ -20,7 +20,7 @@ const CreateEmployeeForm = () => {
     }
 
 
-
+console.log(userdatanew)
     const formik = useFormik({
         initialValues: {
             firstname: userdatanew.firstnam,
@@ -30,6 +30,7 @@ const CreateEmployeeForm = () => {
             email: "",
             phone: "",
             image: "",
+            password:''
         },
 
         onSubmit: async () => {
@@ -40,6 +41,7 @@ const CreateEmployeeForm = () => {
             var email = document.getElementById("Email").value
             var phone = document.getElementById("PhoneNumber").value
             var file = document.getElementById("myFile").files
+            var password = document.getElementById("PassWord").value
             var min = 1000;
             var max = 9999;
             var rand = Math.round(min + (Math.random() * (max - min)));
@@ -61,7 +63,8 @@ const CreateEmployeeForm = () => {
                     designation: designation,
                     profilepic: imgurl,
                     phone: phone,
-                    id: Number(filterdata.viewuser)
+                    id: Number(filterdata.viewuser),
+                    password:password
                 }
 
                 var usercreate = await axios.post("http://localhost:2100/users/update", newdata).then((res) => { return res.data });
@@ -114,7 +117,8 @@ const CreateEmployeeForm = () => {
                     gender: gender,
                     designation: designation,
                     phone: phone,
-                    id: Number(filterdata.viewuser)
+                    id: Number(filterdata.viewuser),
+                    password:password
                 }
                 var usercreatenew = await axios.post("http://localhost:2100/users/update", newdata1).then((res) => { return res.data });
                 if (usercreatenew !== undefined) {
@@ -182,6 +186,8 @@ const CreateEmployeeForm = () => {
                     <input className={styles.m1} id="Email" type="email" defaultValue={userdatanew.email} />
                     <label htmlFor="PhoneNumber">Phone Number</label>
                     <input className={styles.m1} id="PhoneNumber" type="number" defaultValue={userdatanew.phone} />
+                    <label htmlFor="PassWord">Password</label>
+                    <input className={styles.m1} id="PassWord" type="text" defaultValue={userdatanew.password} />
                     {/* <h6>Facility Access</h6>
                     <div className={styles.checkBoxContainer}>
                         <div className={styles.checkBox}>

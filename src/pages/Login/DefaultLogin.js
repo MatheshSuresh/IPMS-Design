@@ -6,6 +6,8 @@ import styles from "../../assets/css/DefaultLogin.module.css";
 import "../../assets/css/dummy.css";
 import { useDispatch } from "react-redux";
 import { loginAction } from "../../Store/Store";
+import axios from "axios";
+import { useSelector } from "react-redux";
 
 const DefaultLogin = () => {
   const dispatch = useDispatch();
@@ -16,11 +18,29 @@ const DefaultLogin = () => {
   const newRegisterHandler = () => {
     dispatch(loginAction.newRegister());
   };
-  const loginbtn = (e) => {
+  const loginbtn = async (e) => {
     e.preventDefault();
-    dispatch(loginAction.loginhandler());
-    window.location.replace("/dashboard");
+    var email = document.getElementById("email").value
+    var password = document.getElementById("password").value
+    var userslist = await axios.get(`${process.env.REACT_APP_SERVER}/users/viewall`).then((res) => { return res.data })
+    var checkuser = await userslist.filter((data) => { return data.email === email })
+    if (checkuser.length !== 0) {
+      if (checkuser[0].password === password) {
+        alert("Welcome..")
+        dispatch(loginAction.loginhandler());
+        sessionStorage.setItem("userid", checkuser[0].id)
+        window.location.replace("/dashboard");
+      } else {
+        alert("Please Check Password..")
+      }
+    } else {
+      alert("Not Valid User..Please Register..")
+    }
   };
+  const filterdata = useSelector((store) => store);
+  if (filterdata.userid !== null) {
+    window.location.replace("/dashboard")
+  }
   return (
     <div className={styles.card}>
       <div className={styles.container}>
@@ -33,13 +53,13 @@ const DefaultLogin = () => {
             <div className={styles.searchIcon}>
               <PersonIcon />
             </div>
-            <InputBase className={styles.input} placeholder="Username" />
+            <InputBase className={styles.input} id="email" placeholder="Email" />
           </div>
           <div className={styles.search}>
             <div className={styles.searchIcon}>
               <LockIcon />
             </div>
-            <InputBase className={styles.input} placeholder="Password" />
+            <InputBase className={styles.input} id="password" placeholder="Password" />
           </div>
           <Button variant="contained" color="primary" onClick={loginbtn}>
             Sign in

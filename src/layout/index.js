@@ -6,17 +6,15 @@ import "animate.css";
 import { useSelector } from "react-redux";
 
 const Index = () => {
-  const islogin = useSelector((store) => store.islogin);
-  console.log(islogin);
+  const islogin = useSelector((store) => store.userid);
   return (
     <div className="layout-div">
-      {islogin && (
+      {islogin !== null ?
         <div className="layout-sidebar-div">
           <Sidebar />
-        </div>
-      )}
+        </div> : null}
       <div className="layout-body card">
-        <Router />
+          <Router />
       </div>
     </div>
   );

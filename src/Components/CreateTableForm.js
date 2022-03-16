@@ -9,11 +9,18 @@ const CreateTableForm = () => {
     var data = {
       tableid: filterdata.tablename,
       seatnumber: filterdata.chairname,
-      employeeid: userid
+      employeeid: userid,
+      selecteddate: sessionStorage.getItem("seleteddate"),
+      tabledetails: sessionStorage.getItem("tabledetails")
     }
     var createbooking = await axios.post(`${process.env.REACT_APP_SERVER}/booking/create`, data).then((res) => { return res.data })
-    if(createbooking !=null){
+    if (createbooking != null) {
       alert(createbooking)
+      sessionStorage.removeItem("seleteddate")
+      sessionStorage.removeItem("tabledetails")
+      sessionStorage.removeItem("tablename")
+      sessionStorage.removeItem("chairname")
+      window.location.replace("/calander")
     }
   }
   return (

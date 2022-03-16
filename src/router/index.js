@@ -9,6 +9,8 @@ import {
   CreateBooking,
   Report,
   OccupentPage,
+  Userlist,
+  EditEmployeeForm
 } from "../pages";
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -24,6 +26,8 @@ const index = () => {
       <Route exact path="/createBooking" component={CreateBooking} />
       <Route exact path="/report" component={Report} />
       <Route exact path="/occupent" component={OccupentPage} />
+      <Route exact path="/userlist" component={Userlist} />
+      <Route exact path="/editEmployee" component={EditEmployeeForm} />
     </BrowserRouter>
   );
 };

@@ -18,7 +18,7 @@ const Calander = () => {
         </div>
         <div className='col-md-8'>
         <tr>
-            <th scope="row"><Link to="/createBooking"><button className='btn detailsbtn m-4'>Create New Booking</button></Link></th>
+            <th scope="row"><Link to="/occupent"><button className='btn detailsbtn m-4'>Create New Booking</button></Link></th>
           </tr>
           <Calenderdetails />
         </div>
